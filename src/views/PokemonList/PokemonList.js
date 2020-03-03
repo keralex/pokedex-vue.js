@@ -12,7 +12,7 @@ export default {
   },
   beforeMount () {
     axios
-      .get('https://pokeapi.co/api/v2/pokemon/?limit=200&offset=0')
+      .get('https://pokeapi.co/api/v2/pokemon/?limit=350&offset=0')
       .then(response => {
         this.pokemons = response.data.results
         console.log(this.pokemons)

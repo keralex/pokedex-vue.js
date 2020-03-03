@@ -1,8 +1,10 @@
 .PokemonCard
-  .name
+  .PokemonCard-title
     h1 {{ name }}
-  .sprite
-    h2 image
-  .type
-    h2 {{types}}
+  .PokemonCard-sprite
+    img(:src="imageUrl", :alt="name")
+  .PokemonCard-decoration
+    .circle
+  .PokemonCard-types
+    h4(v-for='type in types') {{type.name}}
   

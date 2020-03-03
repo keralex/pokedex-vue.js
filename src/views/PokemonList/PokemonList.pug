@@ -1,6 +1,4 @@
 .PokemonList
   .PokemonList-grid
-    p hey
-    .Pokemon-card 
-      pokemonCard(:name="pokemons[0].name" :pokemonUrl="pokemons[0].url" :keyProp="0")
-    p {{ pokemons[0].name }}
+    .PokemonList-card(v-for='pokemon in pokemons')
+      pokemonCard(:name="pokemon.name" :pokemonUrl="pokemon.url" :key='pokemon.id')

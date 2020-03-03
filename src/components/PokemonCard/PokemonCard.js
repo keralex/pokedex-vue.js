@@ -12,7 +12,7 @@ export default {
       name: '',
       imageUrl: '',
       pokemonIndex: '',
-      types: []
+      types: null
     }
   },
   mounted () {
@@ -22,8 +22,9 @@ export default {
         this.name = response.data.name
         this.imageUrl = response.data.sprites.front_default
         this.pokemonIndex = this.keyProp
-        this.types = response.data.types
+        this.types = response.data.types.map(type => type.type)
         console.log(response.data)
+        console.log(this.types)
       })
   }
 }
